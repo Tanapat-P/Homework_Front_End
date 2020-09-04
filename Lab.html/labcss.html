@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>labcss</title>
+
+<style>
+        .tooltip .tooltiptext {
+  visibility: hidden;
+  position: absolute;
+  z-index: 1;
+  
+}
+        .tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+        .dropdown-content {
+    display: none;
+}
+
+        .dropdown:hover .dropdown-content {
+    display: block;
+}
+p {font-weight: 50px;}
+caption {font-size: 30px; font-family: cursive; margin-top: auto;} 
+
+</style>
+    
+</head>
+<body>
+     <table border = "2" cellpadding = "5"> 
+      <caption> CSS table </caption><br><br>
+     
+         <tr>
+             <th> type </th>
+             <th style="text-align: center;"> description </th>
+             
+         </tr>
+
+         <tr>
+             <td> tooltips </td>
+             <td> กล่องข้อความ สำหรับอธิบายรายละเอียดของข้อความ ที่มีขนาดสั้นหรือคลุมเครือยากต่อความเข้าใจ เป็นการซ้อนไว้ต้องนำเมาส์ไปชี้ถึงแสดง
+                ข้อความได้ </td>
+         </tr>
+
+         <tr>
+             <td> Pagination </td>
+             <td> การทำเลขหน้า </td>
+         </tr>
+
+         <tr>
+             <td> Navigation bar </td>
+             <td> แถบควบคุบการทำงาน หรือ เเถบนำทาง </td>
+         </tr>
+
+         <tr>
+             <td> dropdown </td>
+             <td> เมนูเเบบเลื่อนลง </td>
+         </tr>
+     </table>
+
+     <p style="color : green "> A Tooltips Example </p>
+     <div class="tooltip" style ="text-indent: 30px";>Hover over me
+        <span class="tooltiptext">Tooltip text</span>
+      </div>
+
+      <p style="color : green "> A Pagination Example </p>
+      <div class="pagination" style ="text-indent: 30px">
+        <a href="#">&laquo;</a>
+        <a href="#">1</a>
+        <a href="#" class="active">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">&raquo;</a>
+      </div>
+
+      <p style="color : green "> A Navigation bar Example </p>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+
+      <p style="color : green "> A dropdown Example</p>
+      <div class="dropdown" style ="text-indent: 30px">
+        <span>Mouse over me</span>
+        <div class="dropdown-content">
+          <p>JeenoHU</p>
+        </div>
+      </div>
+         
+</body>
+</html>
