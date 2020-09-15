@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holy Grail Layout</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .holygrail {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: coral;
+        }
+
+        /* holygrail header */
+
+        .holygrail-header {
+            display: flex;
+            justify-content: center;
+            background-color: darkcyan;
+            padding: 50px;
+        }
+
+        /* holygrail body */
+
+
+ @media screen and (min-width: 767px) {
+    .holygrail-body {
+        flex-direction: row;
+    }
+    .holygrail-navigation {
+        flex-direction: row;
+        flex: 0 0 12em;
+    }
+    .holygrail-content{
+        flex-direction: row;
+        flex: 1;
+    }
+    .holygrail-ads {
+        flex-direction: row;
+        flex: 0 0 12em;
+    }
+
+    
+}
+
+        
+@media screen and (max-width: 767px) {
+    .holygrail-body {
+        flex-direction: column;
+        
+    }
+    .holygrail-navigation {
+        flex-direction: column;
+        flex: 0 0 200px;
+    }
+    .holygrail-content{
+        flex-direction: column;
+        flex: 0 0 300px;
+    }
+    .holygrail-ads {
+        flex-direction: column;
+        flex: 0 0 100px;
+    }
+
+
+    
+}
+
+            .holygrail-body {
+
+                display: flex;
+                flex: 1;
+            }
+
+            .holygrail-navigation {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 30px;
+                border: 1px solid white;
+                
+            }
+
+            .holygrail-content {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 30px;
+                border: 1px solid white;
+                
+            }
+
+            .holygrail-ads {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 30px;
+                border: 1px solid white;
+               
+            }
+        
+
+
+        /* holygrail footer */
+
+        .holygrail-footer {
+            display: flex;
+            justify-content: center;
+            background-color: khaki;
+            padding: 40px;
+        }
+    </style>
+</head>
+
+
+<body class="holygrail">
+    <header class="holygrail-header">
+        <h1 class="header-text">Header</h1>
+    </header>
+    <div class="holygrail-body">
+        <nav class="holygrail-navigation">
+            navigation
+        </nav>
+        <main class="holygrail-content">content</main>
+        <aside class="holygrail-ads">
+            advertisement
+        </aside>
+    </div>
+    <footer class="holygrail-footer">
+        <h1 class="footer-text">Footer</h1>
+    </footer>
+
+</body>
+
+</html>
