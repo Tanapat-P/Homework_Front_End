@@ -1,0 +1,320 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="inputContainer">
+        <input type="text" class="inputText">
+        <button class="inputBtn">Add</button>
+    </div>
+    <div class="toDoContainer">
+        <ul class="toDoListContainer">
+
+        </ul>
+    </div>
+</body>
+<script>
+    // selector
+    const inputBtn = document.querySelector(".inputBtn");
+    
+
+
+    // Function
+    let addToDoList = function () {
+        const toDoListContainer = document.querySelector('.toDoListContainer');
+        const toDoInputText = document.querySelector('.inputText');
+
+        const toDoItem = document.createElement('li');
+        toDoItem.classList.add('toDoList');
+        toDoItem.innerHTML = toDoInputText.value;
+
+        const delBtn = document.createElement('button');
+        delBtn.classList.add('delBtn');
+        delBtn.innerHTML = 'DELETE';
+        delBtn.addEventListener('click', deleteParent);
+
+        const editBtn = document.createElement('button');
+        editBtn.classList.add('editBtn');
+        editBtn.innerHTML = 'EDIT';
+        editBtn.addEventListener('click', editParent);
+
+        toDoListContainer.appendChild(toDoItem);
+        toDoItem.insertAdjacentElement("afterend", editBtn);
+        toDoItem.insertAdjacentElement("afterend", delBtn);
+
+
+        toDoInputText.value = "";
+    }
+
+    let deleteParent = function () {
+        this.previousSibling.remove();
+        this.nextSibling.remove();
+        this.remove();
+
+    }
+
+    let editParent = function () {
+        console.log(this.previousSibling.previousSibling.innerHTML)
+        this.previousSibling.previousSibling.innerHTML = prompt('Please enter task!');
+    }
+    // evenListener
+    inputBtn.addEventListener('click', addToDoList);
+
+
+</script>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<!-- lab 5 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="counterDiv">
+        <button id="btnIncrease" onclick="increase1()">+</button>
+        <button id="btnDecrease" onclick="decrease1()">-</button>
+        <button id="btnReset" onclick="reset1()">Reset</button>
+        <h1 id="counterValue">0</h1>
+    </div>  
+</body>
+
+<script>
+    const countV = document.getElementById('counterValue');
+    function increase1() {
+        countV.innerHTML = Number(countV.innerHTML) + 1 ;
+        // countV.innerHTML = numCount;
+    }
+
+    function decrease1() {
+        if (countV.innerHTML > 0){
+            countV.innerHTML = Number(countV.innerHTML) - 1 ;
+        } else {
+            countV.innerHTML = 0;
+        }
+        
+    }
+
+    function reset1() {
+        countV.innerHTML = 0;
+    }
+</script>
+</html> -->
+
+
+
+
+
+
+
+
+
+<!-- lab 4
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label for="Province">Province</label>
+        <select name="Province" id="Province" onchange="changeProvince(event)">
+            <option value="default">Please select province</option>
+            <option value="Bangkok">Bangkok</option>
+            <option value="Nonthaburi">Nonthaburi</option>
+        </select>
+        <label for="District">District</label>
+        <select name="District" id="District">
+        </select>
+    </div>
+  
+</body>
+
+<script>
+   function changeProvince() {
+    const districtBox = document.getElementById('District')
+    if (document.getElementById('Province').value === 'Bangkok') {
+        let option = '<option>Ratchathewi</option>';
+        option += '<option>Pathumwan</option>';
+
+        districtBox.innerHTML = option;
+    } else if (document.getElementById('Province').value === 'Nonthaburi') {
+        let option = '<option>Muang</option>';
+        option += '<option>Pakgret</option>';
+
+        districtBox.innerHTML = option;
+    }
+}
+</script>
+</html>
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- lab 3 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button id="btnHideShow" onclick="HS1()">Hide</button>
+        <h2 id="hideShow">Hide and Show</h2>
+    </div>
+</body>
+
+<script>
+      function HS1() {
+        const btnHS = document.getElementById('btnHideShow');
+        if (btnHS.innerHTML === "Hide") {
+            btnHS.innerHTML = "Show";
+            hideShow.hidden = true;
+        } else {
+            btnHS.innerHTML = "Hide";
+            hideShow.hidden = false;
+        }
+    }
+
+</script>
+</html>
+ -->
+
+
+
+<!-- lab 2
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id = "hidden" onclick="hide()"> click to hide me </button>
+    <button onclick="this.hidden = true"> click to hide me</button> // เเบบ 2 บรรทัดเดียวจบ
+ 
+
+    <script>
+       function hide(){
+            document.getElementById('hidden').hidden=true;
+        }
+    </script>
+</body>
+</html> -->
+
+
+
+
+<!-- lab 1
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> lab 1 </title>
+</head>
+<body>
+    <p id="text"> text </p>
+    <button onclick="hideHandler()"> click to hide me </button>
+
+
+    <script>
+        function hideHandler(){
+            document.getElementById('text').hidden=true;
+        }
+
+    </script>
+</body>
+</html> -->
+
+
+
+
+<!-- สอนในห้อง -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="clickHandler()"> Click </button> -->
+<!-- <form action="" onsubmit = "clickHandler()">
+       <input type = "text">
+        <button type="submit"> Submit form </button>
+        <button type="reset"> Reset</button>
+    </form> -->
+
+<!-- <button id = "btnClick"> Click</button>
+    <script>
+        เเบบ 1
+        function clickHandler(){
+            alert("this button is clicked");
+            alert("second alert");
+        }
+        
+        เเบบ 2
+        const btnClick = document.getElementById("btnClick");
+        btnClick.onclick = function(){
+            alert("alert jeeno");
+        }
+
+        const frmTest = document.getElementById("btnClicfrmTest");
+        frmTest.onsubmit = function(){
+            alert("alert dom form")
+        }
+
+        เเบบ 3
+
+        const btnClick = document.getElementById('btnClick');
+        btnClick.addEventListener("click", clickHandler);
+        btnClick.addEventListener('click', () => alert('anonymous click'))
+        btnClick.removeEventListener("click", clickHandler);
+
+        btnClick.addEventListener('click', () => alert("clicked"));
+        btnClick.removeEventListener('click', () => alert("clicked")); // remove เเล้วไม่หาย ถ้าเป็น anonymous function
+
+    </script>  
+</body>
+</html> -->

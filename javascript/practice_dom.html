@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" class="toDoText">
+    <button class="inputBtn"> Add</button>
+    <div>
+        <ul class="appendSomething">
+            <!-- <li> jeeno </li>
+            <button> delete</button>
+            <button> edit</button> -->
+        </ul>
+    </div>
+
+
+    <script>
+        const btn = document.querySelector(".inputBtn");
+              btn.addEventListener('click', addToDoList);
+         
+
+        function addToDoList() {
+            
+            const text = document.querySelector('.toDoText');
+            const toDoAppend = document.querySelector(".appendSomething");
+
+            
+            const toDoList = document.createElement('li');
+            toDoList.classList.add("DoList");
+            toDoList.innerHTML = text.value;
+
+
+            const deleteButton = document.createElement('button');
+            deleteButton.classList.add("deleteButton");
+            deleteButton.innerHTML = "delete";
+            deleteButton.addEventListener('click', deleteParent);
+
+
+            const editButton = document.createElement('button');
+            editButton.classList = "editButton";
+            editButton.innerHTML = "edit";
+            editButton.addEventListener('click', editSomething);
+
+            toDoAppend.append(toDoList)
+            toDoList.insertAdjacentElement('afterend', editButton)
+            toDoList.insertAdjacentElement('afterend', deleteButton )
+
+            text.value = "";
+        }
+
+        function  deleteParent() {
+            console.log(this);
+            console.log(this.previousSibling);
+        this.previousSibling.remove();            
+        this.nextSibling.remove();
+        this.remove();
+        }
+
+        function  editSomething () {
+        console.log(this.previousSibling.previousSibling.innerHTML)
+        this.previousSibling.previousSibling.innerHTML = prompt('Please enter task!');
+        }
+
+
+    </script>
+</body>
+
+</html>

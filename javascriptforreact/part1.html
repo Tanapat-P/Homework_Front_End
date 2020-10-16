@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* args function
+
+        function sumAll(...args) { // args คือชื่อของ array ที่เก็บ Parameters ไว้
+            let sum = 0;
+
+            for (let arg of args) sum += arg;
+
+            return sum;
+        }
+
+        alert(sumAll(1)); // 1
+        alert(sumAll(1, 2)); // 3
+        alert(sumAll(1, 2, 3)); // 6
+        alert(sumAll(1,2,3,4,5)); */
+
+
+        /* mergeChar function
+
+        function mergeChar(...chars) {
+            let sum = ""
+
+            for (let char of chars) sum += char
+
+            return sum;
+        }
+
+        alert(mergeChar("G", "o", "o", "", "g", "l", "e")) */
+
+        /* rest parameter
+       
+        function showName(firstName, lastName, ...titles) {
+            alert(firstName + ' ' + lastName); 
+            // ที่เหลือ (the rest) กลายเป็น array ชื่อ titles
+            // เช่น titles = ["Consul", "Imperator"]
+            alert(titles[0]); 
+            alert(titles[1]);
+            alert(titles.length); 
+         
+        }
+
+        showName("Julius", "Caesar", "Consul", "Imperator") */
+
+
+        /* argument
+        function showNumber(first, second, ...numbers) {
+            console.log(numbers);
+            console.log(arguments);
+        }
+
+        showNumber(1, 2, 3, 4, 5, 6); */
+
+
+        /*5.7.1
+
+        let user = {
+            name : "john",
+            years : 30
+        };
+
+        const {name, years : ages, isAdmin = false} = user; */
+
+
+        /* 5.7.2
+        let salaries = {
+            "John": 100,
+            "Pete": 300,
+            "Mary": 250
+        };
+
+        function topSalaries(obj) {
+            let max = -Infinity;
+            let name = "";
+            for (let key in obj) {
+                if (obj[key]> max){
+                    max = obj[key];
+                    name = key;
+                }
+            }
+           return name;
+        }
+
+        console.log(topSalaries({
+            "John": 100,
+            "Pete": 300,
+            "Mary": 250
+        })) */
+
+
+        
+
+         
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="Exercise.js"> </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="clickHandler()"> Click </button> -->
+    <form action="" onsubmit = "clickHandler()">
+       <input type = "text">
+        <button type="submit"> Submit form </button>
+        <button type="reset"> Reset</button>
+    </form>
+
+    <button id = "btnClick"> Click</button>
+    <script>
+        เเบบ 1
+        function clickHandler(){
+            alert("this button is clicked");
+            alert("second alert");
+        }
+        
+        เเบบ 2
+        const btnClick = document.getElementById("btnClick");
+        btnClick.onclick = function(){
+            alert("alert jeeno");
+        }
+
+        const frmTest = document.getElementById("btnClicfrmTest");
+        frmTest.onsubmit = function(){
+            alert("alert dom form")
+        }
+
+        เเบบ 3
+
+        const btnClick = document.getElementById('btnClick');
+        btnClick.addEventListener("click", clickHandler);
+        btnClick.addEventListener('click', () => alert('anonymous click'))
+        btnClick.removeEventListener("click", clickHandler);
+
+        btnClick.addEventListener('click', () => alert("clicked"));
+        btnClick.removeEventListener('click', () => alert("clicked")); // remove เเล้วไม่หาย ถ้าเป็น anonymous function
+
+    </script>  
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form_Head {
+            color : blue;
+            font-size: 30px;
+        }
+
+        .Head_label {
+            color : orange
+        }
+
+        .Head_input {
+            border-color: palevioletred;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <legend class="form_Head"> Personal Information</legend>
+        <table>
+            <tr>
+                <td><label class="Head_label" for="name">ชื่อ:</label></td>
+                <td><input class="Head_input" type="text" id="name"></td>
+            </tr>
+            <tr>
+                <td><label class="Head_label" for="surname">นามสกุล:</label></td>
+                <td><input class="Head_input" type="text" id="surname"></td>
+            </tr>
+            <tr>
+                <td><label class="Head_label" for="age">อายุ:</label></td>
+                <td><input class="Head_input" type="number" id="age"></td>
+            </tr>
+            <tr>
+                <td><label class="Head_label" for="birth">วัน เดือน ปีเกิด:</label></td>
+                <td><input class="Head_input" type="date" id="birth"></td>
+            </tr>
+            <tr>
+                <td><label class="Head_label" for="color">สีที่ชอบ:</label></td>
+                <td><input class="Head_input" type="color" id="color"></td>
+            </tr>
+            <tr>
+                <td class="Head_label">เพศ:</td>
+                <td>
+                    <input type="radio" name="gender" id="female" value="female">
+                    <label for="female"> หญิง </label><br>
+                    <input type="radio" name="gender" id="male" value="male">
+                    <label for="male"> ชาย </label>
+                </td>
+            </tr>
+            <tr>
+                <td><label class="Head_label" for="photo">รูปประจำตัว:</label></td>
+                <td> <input type="file"></td>
+            </tr>
+            <tr>
+                <td><label class="Head_label" for="quote">คติประจำใจ:</label></td>
+                <td><input class="Head_input" type="text" id="quote" style="height:100px;"></td>
+            </tr>
+            <tr>
+                <td colspan=2>
+                    <div><input class="Head_input_button" type="submit">
+                        <input class="Head_input_button" type="reset"></div>
+                </td>
+            </tr>
+        </table>
+
+
+
+        </form>
+    </fieldset>
+</body>
+
+</html>
